@@ -1,0 +1,67 @@
+experiment:
+  version: 0.3.1
+  dataset: movielens_1m
+  data_config:
+
+    ## Uncomment to split the dataset
+    # strategy: dataset
+
+    ## Uncomment for the dataset ml1m
+    # dataset_path: ../data/movielens_1m/dataset_gender.tsv
+
+    ## Uncomment for the dataset coco
+    # dataset_path: ../data/coco/dataset_gender.tsv
+
+
+    ## Uncomment to use the splits 
+    strategy: fixed
+    
+    ## Uncomment for the dataset ml1m
+    train_path: ../data/movielens_1m/splitting/0/0/train.tsv
+    validation_path: ../data/movielens_1m/splitting/0/0/val.tsv
+    test_path: ../data/movielens_1m/splitting/0/test.tsv
+
+    ## Uncomment for the dataset coco
+    #train_path: ../data/coco/splitting/0/0/train.tsv
+    #validation_path: ../data/coco/splitting/0/0/val.tsv
+    #test_path: ../data/coco/splitting/0/test.tsv
+
+
+  splitting:
+    save_on_disk: True
+    # Uncomment for the dataset ml1
+    save_folder: ../data/movielens_1m/splitting/
+
+    # Uncomment for the dataset coco
+    # save_folder: ../data/coco/splitting/
+
+    test_splitting:
+        test_ratio: 0.2
+        strategy: temporal_hold_out
+    validation_splitting:
+        strategy: temporal_hold_out
+        test_ratio: 0.2
+
+  # k recommendations for each user
+  top_k: 10
+  evaluation:
+    cutoffs: [5, 10]
+    simple_metrics: nDCG
+    relevance_threshold: 1
+  gpu: 1
+  external_models_path: ../external/models/__init__.py
+  models:
+    BPRMF:
+      meta:
+        save_recs: True
+      epochs: 10
+      factors: 10
+      lr: 0.001
+      bias_regularization: 0
+      user_regularization: 0.0025
+      positive_item_regularization: 0.0025
+      negative_item_regularization: 0.0025
+      update_negative_item_factors: True
+      update_users: True
+      update_items: True
+      update_bias: True
