@@ -11,7 +11,6 @@
     - [Additional files](#additional-files)
 - [Contribution](#contribution)
 - [License](#license)
-- [More Information](#more-information)
 
 ## Installation
 The code was designed to be used with the [Elliot](https://dl.acm.org/doi/10.1145/3404835.3463245) framework. Because of this, you must download the [repository](https://github.com/sisinflab/elliot) and install all needed packages.
@@ -25,7 +24,10 @@ The modification of the Elliot framework is minimal. In particular, you have to 
 - *elliot/dataset/samplers/*```custom_sampler.py```
 - *elliot/dataset/*```dataset.py```
 
-In *BPRMF.py*, you have to replace the following line of code in the ```__init__``` function:
+with their modified homonymous provided in this repository.
+
+
+In ```BPRMF.py```, you have to replace the following line of code in the ```__init__``` function:
 ```python
 self._sampler = cs.Sampler(self._data.i_train_dict)
 ```
@@ -57,4 +59,4 @@ This software is distributed in the hope that it will be useful, but without any
 
 You should have received a copy of the GNU General Public License along with this source code. If not, go the following link: http://www.gnu.org/licenses/.
 
-## More Information
+<More Information>
