@@ -46,7 +46,7 @@ experiment:
   top_k: 10
   evaluation:
     cutoffs: [5, 10]
-    simple_metrics: nDCG
+    simple_metrics: [nDCG]
     relevance_threshold: 1
   gpu: 1
   external_models_path: ../external/models/__init__.py
