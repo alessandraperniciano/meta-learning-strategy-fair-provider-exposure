@@ -5,6 +5,7 @@
 [Ludovico Boratto](https://www.ludovicoboratto.com/), [Giulia Cerniglia](https://github.com/gcerniglia1), [Mirko Marras](https://www.mirkomarras.com/), [Alessandra Perniciano](https://github.com/alessandraperniciano), [Barbara Pes](https://web.unica.it/unica/page/en/barbara_pes)
 <br>University of Cagliari, Italy </br>
 
+This repository contains the code of the work "[A Cost-Sensitive Meta-Learning Strategy for Fair Provider Exposure in Recommendation](https://arxiv.org/abs/2401.13566)".
 ## Table of Contents
 - [Elliot Base Preparation](#elliot-base-preparation)
 - [Getting Started](#getting-started)
